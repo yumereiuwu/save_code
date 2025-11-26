@@ -8,7 +8,7 @@ Trang web tĩnh giúp bạn lưu và chia sẻ các đoạn code Python, C và C
    - `cd backend/CodeShowcase.Api`
    - `dotnet restore && dotnet run`
    - API mặc định chạy ở `http://localhost:5273`, lưu dữ liệu vào `data/codes.json`.
-   - Deploy backend lên dịch vụ hỗ trợ ASP.NET (Azure App Service, Fly.io, Render...) để người khác truy cập realtime.
+   - Deploy backend lên dịch vụ hỗ trợ ASP.NET (Azure App Service, Fly.io, Render...) để người khác truy cập realtime. Nếu dùng Render free tier, có thể chọn **Language = Docker** và sử dụng `backend/CodeShowcase.Api/Dockerfile`.
 2. **Cấu hình frontend**
    - Trong `index.html`, cập nhật `window.BACKEND_URL` trỏ tới URL backend bạn vừa deploy.
    - Trang sẽ gọi các endpoint `/api/codes` (GET/POST/DELETE) và kết nối SignalR `/hub/codes`.
