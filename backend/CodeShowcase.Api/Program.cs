@@ -31,6 +31,13 @@ app.UseCors();
 
 var api = app.MapGroup("/api/codes");
 
+app.MapGet("/", () =>
+    Results.Ok(new
+    {
+        message = "Code Showcase backend running",
+        endpoints = new[] { "/api/codes", "/hub/codes" }
+    }));
+
 api.MapGet("/", async (ICodeRepository repo, CancellationToken token) =>
     Results.Ok(await repo.GetAllAsync(token)));
 
