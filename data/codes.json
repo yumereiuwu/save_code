@@ -1,0 +1,30 @@
+[
+  {
+    "Id": "example-python",
+    "Title": "Hello Python",
+    "Language": "python",
+    "Content": "def greet(name: str) -\u003E str:\n    return f\u0022Xin chao {name}!\u0022\n\nprint(greet(\u0022Ban\u0022))",
+    "UpdatedAt": "2024-01-01T00:00:00+00:00"
+  },
+  {
+    "Id": "example-c",
+    "Title": "Hello C",
+    "Language": "c",
+    "Content": "#include \u003Cstdio.h\u003E\n\nint main(void) {\n    printf(\u0022Xin chao C!\\n\u0022);\n    return 0;\n}",
+    "UpdatedAt": "2024-01-01T00:00:00+00:00"
+  },
+  {
+    "Id": "example-cpp",
+    "Title": "Hello C\u002B\u002B",
+    "Language": "cpp",
+    "Content": "#include \u003Ciostream\u003E\n#include \u003Cstring\u003E\n\nint main() {\n    std::string name = \u0022Ban\u0022;\n    std::cout \u003C\u003C \u0022Xin chao \u0022 \u003C\u003C name \u003C\u003C \u0022!\u0022 \u003C\u003C std::endl;\n    return 0;\n}",
+    "UpdatedAt": "2024-01-01T00:00:00+00:00"
+  },
+  {
+    "Id": "180b12969eeb46c1bdb8aa5463431019",
+    "Title": "ho\u00E0ng",
+    "Language": "python",
+    "Content": "print(\u0022hello\u0022)",
+    "UpdatedAt": "2025-11-26T09:22:54.0253816+00:00"
+  }
+]

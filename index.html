@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Code Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <h1>Code Showcase</h1>
+        <p>Tạo – lưu – chia sẻ các đoạn code Python, C, C++.</p>
+      </div>
+      <div class="hero-cta">
+        <button id="downloadBtn" class="primary">Tải codes.json</button>
+        <span class="hint">Commit file này lên GitHub để mọi người thấy thay đổi.</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Thêm bài code mới</h2>
+        <form id="codeForm">
+          <label>
+            Tên bài
+            <input type="text" id="titleInput" required>
+          </label>
+          <label>
+            Ngôn ngữ
+            <select id="languageInput" required>
+              <option value="python">Python</option>
+              <option value="c">C</option>
+              <option value="cpp">C++</option>
+            </select>
+          </label>
+          <label>
+            Nội dung code
+            <textarea id="codeInput" rows="8" required></textarea>
+          </label>
+          <button class="primary" type="submit">Lưu tạm</button>
+        </form>
+        <p class="hint">Các thay đổi chỉ lưu trên trình duyệt cho tới khi bạn tải JSON và commit.</p>
+      </section>
+
+      <section class="viewer card">
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="python">Python</button>
+          <button class="tab" data-tab="c">C</button>
+          <button class="tab" data-tab="cpp">C++</button>
+        </div>
+
+        <div id="codeList"></div>
+      </section>
+    </main>
+
+    <template id="codeCardTemplate">
+      <article class="code-card">
+        <header>
+          <div>
+            <h3 class="code-title"></h3>
+            <span class="lang-tag"></span>
+          </div>
+          <div class="actions">
+            <button class="ghost viewBtn">Xem</button>
+            <button class="ghost deleteBtn">Xóa</button>
+          </div>
+        </header>
+        <pre class="code-block"><code></code></pre>
+      </article>
+    </template>
+
+    <script>
+      const isLocalHost =
+        window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1";
+
+      window.BACKEND_URL = isLocalHost
+        ? "http://localhost:5000"
+        : "https://your-production-backend.example.com";
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@microsoft/signalr@8.0.0/dist/browser/signalr.min.js"
+      integrity="sha384-/taWmisziXYpcfnYsumSUmNaiMvG/fF/OJOUCLnqCIYTrpOZy7WbFF6FfIxwOrfL"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
+

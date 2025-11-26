@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CodeShowcase.Api.props" />
+</Project>
